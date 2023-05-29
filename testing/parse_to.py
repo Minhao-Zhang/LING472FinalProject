@@ -16,6 +16,7 @@ def tmp(original, parse, output):
                 if not line:  # Empty line indicates end of a sentence
                     l += 1
                     w = 0
+                    output_f.write('\n')
                 else:
                     words = line.split(' ')
                     words[2] = words[3]
@@ -29,10 +30,10 @@ def tmp(original, parse, output):
     if current_sentence:
         sentences.append(' '.join(current_sentence))
 
-common = "testa"
+common = "test"
 
-original = f'./dataset/eng.{common}'
-parse = f'./testing/eng.{common}.result'
-output = f'./testing/eng.{common}.label'
+original = '../dataset/eng.' + common
+parse = './eng.' + common + '.result'
+output = './eng.' + common + '.label'
 
 tmp(original, parse, output)

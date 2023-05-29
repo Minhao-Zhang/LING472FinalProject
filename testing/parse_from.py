@@ -22,7 +22,7 @@ def tmp(input_file, output_file):
 
 common = "testa"
 
-input_filename = f'dataset/eng.{common}'
-output_filename = f'testing/eng.{common}.sentences'
+input_filename = '../dataset/eng.' + common
+output_filename = './eng.' + common + '.sentences'
 
 tmp(input_filename, output_filename)
